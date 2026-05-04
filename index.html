@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>AMC Gedibois — Négoce de matériaux en Sarthe &amp; Mayenne · Charpente, couverture, ardoise</title>
+<meta name="description" content="AMC Gedibois — Négoce de matériaux pour particuliers et professionnels. 3 agences en Sarthe et Mayenne (Sablé-sur-Sarthe, Luceau, Évron). Charpente, couverture, ardoise, façonnage métaux." />
+<meta name="robots" content="noindex,nofollow" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --green:#00A552;
+  --green-dark:#007A3D;
+  --green-darker:#005C2E;
+  --green-soft:#E6F4EC;
+  --green-pale:#F2FAF6;
+  --black:#1A1A1A;
+  --ink:#1F2937;
+  --gray:#5A6A7A;
+  --gray-light:#9CA3AF;
+  --line:#E5E7EB;
+  --white:#FFFFFF;
+  --cream:#FAFAF7;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:"Inter",system-ui,-apple-system,sans-serif;background:var(--white);color:var(--ink);font-weight:400;line-height:1.6;-webkit-font-smoothing:antialiased;}
+img{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+button{font-family:inherit;border:0;background:none;cursor:pointer;color:inherit;}
+::selection{background:var(--green);color:var(--white);}
+.container{max-width:1280px;margin:0 auto;padding:0 24px;}
+@media (max-width:600px){.container{padding:0 20px;}}
+
+/* ========== Top bar (contact rapide) ========== */
+.topbar{background:var(--green-darker);color:var(--white);padding:9px 0;font-size:13px;}
+.topbar .container{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;}
+.topbar .left{display:flex;gap:24px;align-items:center;flex-wrap:wrap;}
+.topbar .item{display:inline-flex;align-items:center;gap:7px;}
+.topbar a{transition:opacity .2s;}
+.topbar a:hover{opacity:.8;}
+.topbar .right{font-size:12px;letter-spacing:.05em;opacity:.85;}
+@media (max-width:768px){.topbar{font-size:12px;}.topbar .right{display:none;}}
+
+/* ========== NAV ========== */
+.nav{position:sticky;top:0;z-index:50;background:var(--white);border-bottom:1px solid var(--line);box-shadow:0 1px 0 rgba(0,0,0,.04);}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0;gap:24px;}
+.brand{display:flex;align-items:center;gap:14px;}
+.brand img{height:54px;width:auto;}
+.nav-links{display:none;gap:32px;font-size:14px;font-weight:500;color:var(--ink);}
+.nav-links a{position:relative;padding:6px 0;transition:color .2s;}
+.nav-links a:hover{color:var(--green);}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:2px;background:var(--green);transition:width .2s;}
+.nav-links a:hover::after{width:100%;}
+.nav-cta{display:inline-flex;align-items:center;gap:8px;background:var(--green);color:var(--white);padding:11px 22px;font-weight:600;font-size:14px;border-radius:6px;transition:background .2s;}
+.nav-cta:hover{background:var(--green-dark);}
+@media (min-width:980px){.nav-links{display:flex;}}
+
+/* ========== HERO VIDEO ========== */
+.hero{position:relative;color:var(--white);overflow:hidden;background:#0a1812 url('img/profilage.avif') center/cover no-repeat;min-height:640px;display:flex;align-items:center;}
+.hero-video{position:absolute;inset:0;z-index:0;}
+.hero-video video{width:100%;height:100%;object-fit:cover;}
+@media (max-width:768px){
+  .hero-video{display:none;}
+}
+.hero-overlay{position:absolute;inset:0;z-index:1;background:linear-gradient(135deg,rgba(0,92,46,0.88) 0%,rgba(0,40,20,0.78) 50%,rgba(10,20,15,0.85) 100%);}
+.hero-overlay::after{
+  content:"";position:absolute;inset:0;
+  background-image:
+    radial-gradient(circle at 80% 20%,rgba(255,255,255,0.06),transparent 50%),
+    radial-gradient(circle at 20% 80%,rgba(0,165,82,0.15),transparent 50%);
+}
+.hero-inner{position:relative;z-index:2;padding:96px 0 112px;text-align:center;max-width:920px;margin:0 auto;}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:#9FE7BC;font-weight:600;margin-bottom:28px;justify-content:center;}
+.hero-eyebrow::before, .hero-eyebrow::after{content:"";display:inline-block;width:32px;height:2px;background:#9FE7BC;}
+.hero-title{font-weight:800;font-size:clamp(36px,5.6vw,68px);line-height:1.05;letter-spacing:-.02em;color:var(--white);margin-bottom:24px;text-shadow:0 4px 24px rgba(0,0,0,0.3);}
+.hero-title .accent{color:#9FE7BC;font-style:italic;font-weight:600;}
+.hero-sub{font-size:19px;color:rgba(255,255,255,.92);max-width:680px;margin:0 auto 36px;line-height:1.6;text-shadow:0 2px 12px rgba(0,0,0,0.3);}
+.hero-cta{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 26px;font-weight:600;font-size:15px;border-radius:6px;transition:transform .15s,background .15s,color .15s,box-shadow .2s;cursor:pointer;border:0;}
+.btn-primary{background:var(--white);color:var(--green-dark);}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(0,0,0,.2);}
+.btn-secondary{background:transparent;color:var(--white);border:2px solid rgba(255,255,255,.4);}
+.btn-secondary:hover{border-color:var(--white);background:rgba(255,255,255,.08);}
+.btn-green{background:var(--green);color:var(--white);}
+.btn-green:hover{background:var(--green-dark);}
+.btn-arrow::after{content:"→";display:inline-block;transition:transform .2s;}
+.btn-arrow:hover::after{transform:translateX(4px);}
+.hero-img-wrap{position:relative;}
+.hero-img{aspect-ratio:4/3;border-radius:12px;overflow:hidden;background:rgba(255,255,255,.05);box-shadow:0 30px 60px rgba(0,0,0,.3);}
+.hero-img img{width:100%;height:100%;object-fit:cover;}
+.hero-card{position:absolute;left:-16px;bottom:-24px;background:var(--white);color:var(--ink);padding:18px 22px;border-radius:10px;box-shadow:0 12px 30px rgba(0,0,0,.18);min-width:240px;}
+.hero-card .lbl{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gray);font-weight:600;margin-bottom:6px;}
+.hero-card .val{font-size:20px;font-weight:800;color:var(--green-dark);}
+.hero-card .sub{font-size:13px;color:var(--gray);margin-top:2px;}
+
+/* ========== USP (3 colonnes valeurs) ========== */
+.usp{background:var(--white);padding:72px 0;border-bottom:1px solid var(--line);}
+.usp-grid{display:grid;grid-template-columns:1fr;gap:32px;}
+@media (min-width:800px){.usp-grid{grid-template-columns:repeat(3,1fr);gap:48px;}}
+.usp-item{display:flex;gap:18px;align-items:flex-start;}
+.usp-ico{width:52px;height:52px;border-radius:12px;background:var(--green-soft);color:var(--green-dark);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.usp-ico svg{width:26px;height:26px;}
+.usp-item h3{font-weight:700;font-size:18px;color:var(--ink);margin-bottom:8px;letter-spacing:-.005em;}
+.usp-item p{font-size:14px;color:var(--gray);line-height:1.6;}
+
+/* ========== Sections génériques ========== */
+.section{padding:96px 0;}
+.section-cream{background:var(--cream);}
+.section-pale{background:var(--green-pale);}
+.section-h{margin-bottom:56px;text-align:center;max-width:720px;margin-left:auto;margin-right:auto;}
+.section-h .label{display:inline-block;font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--green-dark);font-weight:700;margin-bottom:14px;padding:6px 14px;border-radius:100px;background:var(--green-soft);}
+.section-h h2{font-weight:800;font-size:clamp(30px,4vw,46px);color:var(--ink);line-height:1.1;letter-spacing:-.02em;}
+.section-h p{margin-top:18px;font-size:17px;color:var(--gray);line-height:1.6;}
+
+/* ========== Catégories produits ========== */
+.family{margin-bottom:64px;}
+.family:last-child{margin-bottom:0;}
+.family-h{margin-bottom:32px;display:flex;align-items:flex-start;gap:20px;padding-bottom:18px;border-bottom:2px solid var(--green-soft);}
+.family-num{display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:12px;background:var(--green);color:var(--white);font-weight:800;font-size:18px;flex-shrink:0;}
+.family-h h3{font-weight:800;font-size:clamp(22px,2.6vw,30px);color:var(--ink);letter-spacing:-.01em;margin-bottom:6px;}
+.family-h p{font-size:15px;color:var(--gray);line-height:1.55;margin:0;}
+.family-h > div{flex:1;}
+.products-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;}
+@media (min-width:700px){.products-grid{grid-template-columns:repeat(3,1fr);gap:20px;}}
+@media (min-width:1100px){.products-grid{grid-template-columns:repeat(4,1fr);}}
+.product-card{background:var(--white);border:1px solid var(--line);border-radius:12px;overflow:hidden;display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s,border-color .2s;cursor:default;}
+.product-card:hover{transform:translateY(-4px);box-shadow:0 20px 40px -20px rgba(0,165,82,.25);border-color:var(--green);}
+.product-img{aspect-ratio:4/3;background:var(--green-pale);overflow:hidden;}
+.product-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s;}
+.product-card:hover .product-img img{transform:scale(1.06);}
+.product-body{padding:18px 20px 20px;}
+.product-card h3{font-weight:700;font-size:16px;color:var(--ink);letter-spacing:-.005em;margin-bottom:14px;}
+.product-card .more{display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--green-dark);font-weight:600;transition:gap .2s;margin-top:auto;padding-top:10px;border-top:1px solid var(--line);}
+.product-card .more::after{content:"→";display:inline-block;transition:transform .2s;}
+.product-card:hover .more::after{transform:translateX(4px);}
+.product-card .product-body{flex:1;display:flex;flex-direction:column;}
+
+/* ========== Service en avant (façonnage métal) ========== */
+.feature{display:grid;grid-template-columns:1fr;gap:48px;align-items:center;}
+@media (min-width:900px){.feature{grid-template-columns:1fr 1.1fr;}}
+.feature-img{aspect-ratio:4/3;border-radius:14px;overflow:hidden;}
+.feature-img img{width:100%;height:100%;object-fit:cover;}
+.feature-content .label{display:inline-block;font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--green-dark);font-weight:700;margin-bottom:14px;padding:6px 14px;border-radius:100px;background:var(--green-soft);}
+.feature-content h2{font-weight:800;font-size:clamp(28px,3.5vw,40px);color:var(--ink);line-height:1.1;letter-spacing:-.02em;margin-bottom:18px;}
+.feature-content p{font-size:16px;color:var(--gray);line-height:1.7;margin-bottom:14px;}
+.feature-list{list-style:none;padding:0;margin:24px 0 32px;}
+.feature-list li{display:flex;gap:12px;align-items:flex-start;padding:10px 0;font-size:15px;color:var(--ink);}
+.feature-list li::before{content:"";width:20px;height:20px;border-radius:50%;background:var(--green-soft);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23007A3D' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:center;background-size:12px;flex-shrink:0;margin-top:2px;}
+
+/* ========== Agences ========== */
+.agences-grid{display:grid;grid-template-columns:1fr;gap:24px;}
+@media (min-width:800px){.agences-grid{grid-template-columns:repeat(3,1fr);}}
+.agence{background:var(--white);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s;}
+.agence:hover{transform:translateY(-4px);box-shadow:0 20px 40px -20px rgba(0,165,82,.2);}
+.agence-img{aspect-ratio:16/10;background:var(--green-pale);overflow:hidden;}
+.agence-img img{width:100%;height:100%;object-fit:cover;}
+.agence-body{padding:24px 24px 28px;flex:1;display:flex;flex-direction:column;}
+.agence-name{font-weight:800;font-size:20px;color:var(--ink);margin-bottom:6px;letter-spacing:-.01em;}
+.agence-city{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--green-dark);font-weight:700;margin-bottom:18px;}
+.agence-info{font-size:14px;color:var(--gray);line-height:1.7;margin-bottom:18px;}
+.agence-info a{color:var(--green-dark);font-weight:600;}
+.agence-info a:hover{text-decoration:underline;}
+.agence-hours{font-size:13px;color:var(--gray);padding-top:14px;border-top:1px solid var(--line);margin-top:auto;}
+.agence-hours strong{color:var(--ink);font-weight:600;display:block;margin-bottom:4px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;}
+.agence-cta{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--green);color:var(--white);padding:11px 18px;font-weight:600;font-size:13px;border-radius:6px;margin-top:18px;transition:background .2s;}
+.agence-cta:hover{background:var(--green-dark);}
+
+/* ========== Stats / chiffres clés ========== */
+.stats{background:var(--green-darker);color:var(--white);padding:72px 0;}
+.stats-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:36px;text-align:center;}
+@media (min-width:800px){.stats-grid{grid-template-columns:repeat(4,1fr);}}
+.stat-num{font-weight:800;font-size:clamp(36px,5vw,52px);line-height:1;color:#9FE7BC;letter-spacing:-.02em;margin-bottom:8px;}
+.stat-label{font-size:13px;letter-spacing:.05em;color:rgba(255,255,255,.85);font-weight:500;}
+
+/* ========== Catalogues CTA ========== */
+.catalogues{background:linear-gradient(135deg,var(--green-soft) 0%,var(--green-pale) 100%);border-radius:18px;padding:48px 36px;display:grid;grid-template-columns:1fr;gap:32px;align-items:center;}
+@media (min-width:800px){.catalogues{grid-template-columns:1.2fr 1fr;padding:64px 56px;}}
+.catalogues h2{font-weight:800;font-size:clamp(26px,3vw,36px);color:var(--ink);line-height:1.15;letter-spacing:-.02em;margin-bottom:14px;}
+.catalogues p{font-size:16px;color:var(--gray);line-height:1.6;margin-bottom:24px;}
+
+/* ========== Contact ========== */
+.contact-grid{display:grid;grid-template-columns:1fr;gap:32px;}
+@media (min-width:900px){.contact-grid{grid-template-columns:1fr 1fr;gap:48px;}}
+.contact-info{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:36px 32px;}
+.contact-info h3{font-weight:800;font-size:24px;color:var(--ink);margin-bottom:8px;letter-spacing:-.01em;}
+.contact-info > p{color:var(--gray);font-size:15px;margin-bottom:24px;line-height:1.6;}
+.contact-row{display:flex;gap:14px;align-items:flex-start;padding:14px 0;border-bottom:1px solid var(--line);}
+.contact-row:last-of-type{border-bottom:0;padding-bottom:0;}
+.contact-row .ico{width:40px;height:40px;background:var(--green-soft);color:var(--green-dark);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.contact-row .ico svg{width:20px;height:20px;}
+.contact-row .lbl{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gray);margin-bottom:4px;font-weight:600;}
+.contact-row .val{font-size:15px;font-weight:500;color:var(--ink);line-height:1.5;}
+.contact-row .val a{color:var(--green-dark);}
+.contact-form{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:36px 32px;}
+.contact-form h3{font-weight:800;font-size:22px;color:var(--ink);margin-bottom:8px;letter-spacing:-.01em;}
+.contact-form p{color:var(--gray);font-size:14px;margin-bottom:24px;}
+.field{margin-bottom:14px;}
+.field label{display:block;font-size:12px;letter-spacing:.05em;color:var(--gray);font-weight:600;margin-bottom:6px;}
+.field input, .field select, .field textarea{width:100%;padding:11px 14px;border:1px solid var(--line);border-radius:8px;font-family:inherit;font-size:14px;color:var(--ink);background:var(--white);transition:border-color .2s;}
+.field input:focus, .field select:focus, .field textarea:focus{outline:0;border-color:var(--green);}
+.field textarea{resize:vertical;min-height:100px;}
+.contact-form button{width:100%;background:var(--green);color:var(--white);padding:14px;font-weight:600;font-size:15px;border-radius:8px;cursor:pointer;transition:background .2s;}
+.contact-form button:hover{background:var(--green-dark);}
+
+/* ========== Footer ========== */
+.footer{background:#0F1F18;color:#9CA3AF;padding:72px 0 32px;}
+.footer-grid{display:grid;grid-template-columns:1fr;gap:36px;}
+@media (min-width:800px){.footer-grid{grid-template-columns:2fr 1fr 1fr 1fr;}}
+.footer-brand{display:inline-block;margin-bottom:18px;background:#00A552;padding:6px 10px;border-radius:8px;}
+.footer-brand img{height:50px;width:auto;display:block;}
+.footer-text{font-size:14px;line-height:1.7;color:#9CA3AF;}
+.footer-h{font-weight:700;color:var(--white);font-size:13px;letter-spacing:.18em;text-transform:uppercase;margin-bottom:14px;}
+.footer-l{font-size:14px;line-height:2;color:#9CA3AF;}
+.footer-l a{transition:color .2s;}
+.footer-l a:hover{color:#9FE7BC;}
+.footer-bottom{border-top:1px solid #1F2D26;margin-top:48px;padding-top:24px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;font-size:12px;color:#5A6A6F;letter-spacing:.05em;}
+.footer-bottom a{color:#9FE7BC;}
+
+/* ========== Sticky mobile call ========== */
+.sticky-call{position:fixed;bottom:0;left:0;right:0;background:var(--green);color:var(--white);padding:14px;text-align:center;font-weight:700;font-size:15px;z-index:100;display:flex;align-items:center;justify-content:center;gap:8px;box-shadow:0 -4px 12px rgba(0,0,0,.1);}
+@media (min-width:900px){.sticky-call{display:none;}}
+@media (max-width:899px){body{padding-bottom:64px;}}
+</style>
+</head>
+<body>
+
+<!-- Top bar contact -->
+<div class="topbar">
+  <div class="container">
+    <div class="left">
+      <span class="item">📍 3 agences en Sarthe &amp; Mayenne</span>
+      <span class="item">📞 <a href="tel:+33243558038">02 43 55 80 38</a></span>
+      <span class="item">🕐 Lun–Ven 8h–12h / 13h45–17h45</span>
+    </div>
+    <div class="right">Membre du réseau Gedibois — Experts par passion</div>
+  </div>
+</div>
+
+<!-- NAV -->
+<header class="nav">
+  <div class="container nav-inner">
+    <a href="#" class="brand">
+      <img src="img/logo-amc.jpg" alt="AMC Gedibois" />
+    </a>
+    <nav class="nav-links">
+      <a href="#produits">Produits</a>
+      <a href="faconnage.html">Façonnage métaux</a>
+      <a href="#agences">Nos 3 agences</a>
+      <a href="a-propos.html">À propos</a>
+      <a href="partenaires.html">Partenaires</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="#contact" class="nav-cta">Nous contacter</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-video">
+    <video autoplay muted loop playsinline poster="img/profilage.avif" preload="auto">
+      <source src="video/profilage-720p.mp4" type="video/mp4" media="(min-width: 768px)" />
+      <source src="video/profilage-480p.mp4" type="video/mp4" />
+    </video>
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="container hero-inner">
+    <div class="hero-eyebrow">AMC Gedibois · Sarthe &amp; Mayenne · Depuis 2008</div>
+    <h1 class="hero-title">Le bois et le métal, <span class="accent">c'est notre métier</span>.</h1>
+    <p class="hero-sub">Trois agences en Sarthe et Mayenne. Une entreprise familiale indépendante. La force d'un réseau national de plus de 50 distributeurs : Gedibois.</p>
+    <div class="hero-cta">
+      <a href="#produits" class="btn btn-primary btn-arrow">Découvrir nos produits</a>
+      <a href="#agences" class="btn btn-secondary">Voir nos 3 agences</a>
+    </div>
+  </div>
+</section>
+
+<!-- USP -->
+<section class="usp">
+  <div class="container usp-grid">
+    <div class="usp-item">
+      <div class="usp-ico">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      </div>
+      <div>
+        <h3>3 agences proches</h3>
+        <p>Sablé-sur-Sarthe, Luceau et Évron. Un site de retrait à moins de 30 min, où que vous soyez en Sarthe ou Mayenne.</p>
+      </div>
+    </div>
+    <div class="usp-item">
+      <div class="usp-ico">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      </div>
+      <div>
+        <h3>Conseils d'experts</h3>
+        <p>Une équipe formée aux métiers de la charpente, couverture et bois. Chiffrages précis, recommandations techniques pour votre chantier.</p>
+      </div>
+    </div>
+    <div class="usp-item">
+      <div class="usp-ico">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h18M3 12h18M3 17h12"/></svg>
+      </div>
+      <div>
+        <h3>Pros &amp; particuliers</h3>
+        <p>Ouvert aux artisans, entreprises du bâtiment et particuliers. Tarifs adaptés selon votre profil et vos volumes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUITS -->
+<section id="produits" class="section section-cream">
+  <div class="container">
+    <div class="section-h">
+      <span class="label">Notre catalogue</span>
+      <h2>Tout pour votre chantier, sous un même toit.</h2>
+      <p>De la charpente bois aux ardoises, en passant par l'isolation, les menuiseries et l'agrégats — découvrez notre offre complète.</p>
+    </div>
+
+    <!-- COUVERTURE -->
+    <div id="couverture" class="family">
+      <div class="family-h">
+        <span class="family-num">01</span>
+        <div>
+          <h3>Couverture</h3>
+          <p>Tout pour le toit : ardoises, tuiles, zinc, bac acier, fenêtres et zinguerie PVC.</p>
+        </div>
+      </div>
+      <div class="products-grid">
+        <a href="pdf/ardoise.pdf" target="_blank" rel="noopener noreferrer" class="product-card">
+          <div class="product-img"><img src="img/ardoise.avif" alt="Ardoise" loading="lazy" /></div>
+          <div class="product-body"><h3>Ardoise</h3><span class="more">En savoir plus</span></div>
+        </a>
+        <a href="pdf/tuiles.pdf" target="_blank" rel="noopener noreferrer" class="product-card">
+          <div class="product-img"><img src="img/tuiles.avif" alt="Tuiles" loading="lazy" /></div>
+          <div class="product-body"><h3>Tuiles</h3><span class="more">En savoir plus</span></div>
+        </a>
+        <a href="pdf/zinc.pdf" target="_blank" rel="noopener noreferrer" class="product-card">
+          <div class="product-img"><img src="img/zinc.avif" alt="Zinc" loading="lazy" /></div>
+          <div class="product-body"><h3>Zinc</h3><span class="more">En savoir plus</span></div>
+        </a>
+        <a href="pdf/bac-acier.pdf" target="_blank" rel="noopener noreferrer" class="product-card">
+          <div class="product-img"><img src="img/bac-acier.avif" alt="Bac acier" loading="lazy" /></div>
+          <div class="product-body"><h3>Bac acier</h3><span class="more">En savoir plus</span></div>
+        </a>
+        <a href="pdf/fenetres-de-toit.pdf" target="_blank" rel="noopener noreferrer" class="product-card">
+          <div class="product-img"><img src="img/fenetre-de-toit.avif" alt="Fenêtre de toit" loading="lazy" /></div>
+          <div class="product-body"><h3>Fenêtre de toit</h3><span class="more">En savoir plus</span></div>
+        </a>
+        <a href="pdf/pvc.pdf" target="_blank" rel="noopener noreferrer" class="product-card">
+          <div class="product-img"><img src="img/pvc.avif" alt="PVC" loading="lazy" /></div>
+          <div class="product-body"><h3>PVC</h3><span class="more">En savoir plus</span></div>
+        </a>
+      </div>
+    </div>
+
+    <!-- CHARPENTE -->
+    <div id="charpente" class="family">
+      <div class="family-h">
+        <span class="family-num">02</span>
+        <div>
+          <h3>Charpente</h3>
+          <p>Bois de structure et matériaux gros œuvre — du sapin classe 2 aux agrégats.</p>
+        </div>
+      </div>
+      <div class="products-grid">
+        <a href="pdf/bois-de-charpente.pdf" target="_blank" rel="noopener noreferrer" class="product-card">
+          <div class="product-img"><img src="img/bois-de-charpente.avif" alt="Bois de charpente" loading="lazy" /></div>
+          <div class="product-body"><h3>Bois de charpente</h3><span class="more">En savoir plus</span></div>
+        </a>
+        <a href="pdf/bois-amenagement-exterieur.pdf" target="_blank" rel="noopener noreferrer" class="product-card">
+          <div class="product-img"><img src="img/bois-pour-amenagements-ext.avif" alt="Bois pour aménagements extérieurs" loading="lazy" /></div>
+          <div class="product-body"><h3>Aménagements extérieurs</h3><span class="more">En savoir plus</span></div>
+        </a>
+        <a href="pdf/agregats.pdf" target="_blank" rel="noopener noreferrer" class="product-card">
+          <div class="product-img"><img src="img/agregats.avif" alt="Agrégats" loading="lazy" /></div>
+          <div class="product-body"><h3>Agrégats</h3><span class="more">En savoir plus</span></div>
+        </a>
+        <a href="pdf/pierres-de-decoration.pdf" target="_blank" rel="noopener noreferrer" class="product-card">
+          <div class="product-img"><img src="img/peirres-de-deco.avif" alt="Pierres de décoration" loading="lazy" /></div>
+          <div class="product-body"><h3>Pierres de décoration</h3><span class="more">En savoir plus</span></div>
+        </a>
+      </div>
+    </div>
+
+    <!-- MENUISERIE -->
+    <div id="menuiserie" class="family">
+      <div class="family-h">
+        <span class="family-num">03</span>
+        <div>
+          <h3>Menuiserie</h3>
+          <p>Menuiseries intérieures, panneaux et dalles — stock courant et commandes sur-mesure.</p>
+        </div>
+      </div>
+      <div class="products-grid">
+        <a href="pdf/menuiserie.pdf" target="_blank" rel="noopener noreferrer" class="product-card">
+          <div class="product-img"><img src="img/menuiserie.avif" alt="Menuiserie" loading="lazy" /></div>
+          <div class="product-body"><h3>Menuiserie</h3><span class="more">En savoir plus</span></div>
+        </a>
+        <a href="pdf/panneaux.pdf" target="_blank" rel="noopener noreferrer" class="product-card">
+          <div class="product-img"><img src="img/panneaux-et-dalles.avif" alt="Panneaux et dalles" loading="lazy" /></div>
+          <div class="product-body"><h3>Panneaux &amp; dalles</h3><span class="more">En savoir plus</span></div>
+        </a>
+      </div>
+    </div>
+
+    <!-- ISOLATION -->
+    <div id="isolation" class="family">
+      <div class="family-h">
+        <span class="family-num">04</span>
+        <div>
+          <h3>Isolation</h3>
+          <p>Isolation thermique et acoustique, plaques de plâtre techniques pour cloisonnement.</p>
+        </div>
+      </div>
+      <div class="products-grid">
+        <a href="pdf/isolation.pdf" target="_blank" rel="noopener noreferrer" class="product-card">
+          <div class="product-img"><img src="img/isoaltion.avif" alt="Isolation" loading="lazy" /></div>
+          <div class="product-body"><h3>Isolation</h3><span class="more">En savoir plus</span></div>
+        </a>
+        <a href="pdf/plaques-de-platres.pdf" target="_blank" rel="noopener noreferrer" class="product-card">
+          <div class="product-img"><img src="img/plaques-de-platres.avif" alt="Plaques de plâtres" loading="lazy" /></div>
+          <div class="product-body"><h3>Plaques de plâtre</h3><span class="more">En savoir plus</span></div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- STATS / CHIFFRES CLÉS -->
+<section class="stats">
+  <div class="container stats-grid">
+    <div>
+      <div class="stat-num">3</div>
+      <div class="stat-label">Agences en Sarthe<br />&amp; Mayenne</div>
+    </div>
+    <div>
+      <div class="stat-num">14+</div>
+      <div class="stat-label">Familles de produits<br />en stock</div>
+    </div>
+    <div>
+      <div class="stat-num">100%</div>
+      <div class="stat-label">Pros &amp; particuliers<br />bienvenus</div>
+    </div>
+    <div>
+      <div class="stat-num">48 h</div>
+      <div class="stat-label">Devis façonnage<br />sur-mesure</div>
+    </div>
+  </div>
+</section>
+
+<!-- AGENCES -->
+<section id="agences" class="section section-pale">
+  <div class="container">
+    <div class="section-h">
+      <span class="label">Nos 3 agences</span>
+      <h2>Un négoce proche de votre chantier.</h2>
+      <p>Sablé-sur-Sarthe, Luceau et Évron — chaque agence vous accueille du lundi au vendredi avec son équipe locale.</p>
+    </div>
+
+    <div class="agences-grid">
+      <!-- Sablé -->
+      <article class="agence">
+        <div class="agence-img"><img src="img/amc-sable-real.jpg" alt="Agence AMC Gedibois Sablé-sur-Sarthe" loading="lazy" /></div>
+        <div class="agence-body">
+          <div class="agence-name">AMC Gedibois Sablé</div>
+          <div class="agence-city">Sarthe · 72</div>
+          <div class="agence-info">
+            ZA les Seguinières<br />
+            Rue Victor Hugo<br />
+            72300 Sablé-sur-Sarthe<br />
+            <a href="tel:+33243558038">02 43 55 80 38</a>
+          </div>
+          <div class="agence-hours">
+            <strong>Horaires</strong>
+            Lun–Ven · 8h–12h / 13h45–17h45<br />
+            Fermé le week-end
+          </div>
+          <a href="https://maps.app.goo.gl/nfz7hopbDhoPhcn56" target="_blank" rel="noopener noreferrer" class="agence-cta">Itinéraire</a>
+        </div>
+      </article>
+
+      <!-- Luceau -->
+      <article class="agence">
+        <div class="agence-img"><img src="img/amc-luceau-real.jpg" alt="Agence AMC Gedibois Luceau" loading="lazy" /></div>
+        <div class="agence-body">
+          <div class="agence-name">AMC Gedibois Luceau</div>
+          <div class="agence-city">Sarthe · 72</div>
+          <div class="agence-info">
+            40 Rte de Château du Loir<br />
+            72500 Luceau<br />
+            <a href="tel:+33249121002">02 49 12 10 02</a>
+          </div>
+          <div class="agence-hours">
+            <strong>Horaires</strong>
+            Lun–Ven · 8h–12h / 13h45–17h45<br />
+            Fermé le week-end
+          </div>
+          <a href="https://maps.app.goo.gl/9Nz3HznksrAnULeW8" target="_blank" rel="noopener noreferrer" class="agence-cta">Itinéraire</a>
+        </div>
+      </article>
+
+      <!-- Évron -->
+      <article class="agence">
+        <div class="agence-img"><img src="img/amc-evron.jpg" alt="Agence AMC Gedibois Évron — Pôle Artisanal Les Coëvrons" loading="lazy" /></div>
+        <div class="agence-body">
+          <div class="agence-name">AMC Gedibois Évron</div>
+          <div class="agence-city">Mayenne · 53</div>
+          <div class="agence-info">
+            Pôle Artisanal Les Coëvrons<br />
+            4 Imp. Newton<br />
+            53600 Évron<br />
+            <a href="tel:+33243558038">02 43 55 80 38</a>
+          </div>
+          <div class="agence-hours">
+            <strong>Horaires</strong>
+            Lun–Ven · 8h–12h / 13h45–17h45<br />
+            Fermé le week-end
+          </div>
+          <a href="https://maps.app.goo.gl/ANJjpnb5FxU9vYZU9" target="_blank" rel="noopener noreferrer" class="agence-cta">Itinéraire</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- CATALOGUES -->
+<section id="catalogues" class="section">
+  <div class="container">
+    <div class="catalogues">
+      <div>
+        <h2>Consultez nos catalogues 2026</h2>
+        <p>Charpente, couverture, isolation, menuiserie — l'intégralité de notre offre dans des catalogues à feuilleter ou à télécharger en PDF.</p>
+        <a href="#contact" class="btn btn-green btn-arrow">Demander les catalogues</a>
+      </div>
+      <div>
+        <img src="img/bois-de-charpente.avif" alt="Catalogues 2026 AMC Gedibois" style="border-radius:12px;aspect-ratio:4/3;object-fit:cover;width:100%;" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section section-cream">
+  <div class="container">
+    <div class="section-h">
+      <span class="label">Nous contacter</span>
+      <h2>Parlons ensemble de votre projet.</h2>
+      <p>Particulier, artisan ou entreprise — décrivez-nous votre besoin et un de nos conseillers vous rappelle sous 24 h ouvrées.</p>
+    </div>
+
+    <div class="contact-grid">
+      <!-- Infos -->
+      <div class="contact-info">
+        <h3>Joindre nos 3 agences</h3>
+        <p>Lun–Ven · 8h–12h / 13h45–17h45 — fermé le week-end. Cliquez sur le numéro pour appeler directement.</p>
+
+        <div class="contact-row">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.33 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+          <div>
+            <div class="lbl">Sablé-sur-Sarthe (siège)</div>
+            <div class="val"><a href="tel:+33243558038">02 43 55 80 38</a></div>
+          </div>
+        </div>
+        <div class="contact-row">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.33 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+          <div>
+            <div class="lbl">Luceau</div>
+            <div class="val"><a href="tel:+33249121002">02 49 12 10 02</a></div>
+          </div>
+        </div>
+        <div class="contact-row">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.33 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+          <div>
+            <div class="lbl">Évron</div>
+            <div class="val"><a href="tel:+33243558038">02 43 55 80 38</a></div>
+          </div>
+        </div>
+        <div class="contact-row">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+          <div>
+            <div class="lbl">Horaires (3 agences)</div>
+            <div class="val">Lun–Ven · 8h–12h / 13h45–17h45<br /><span style="color:var(--gray);font-size:13px;">Fermé samedi &amp; dimanche</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <form class="contact-form" onsubmit="event.preventDefault();alert('Merci ! Votre message est bien reçu (formulaire à activer côté serveur).');">
+        <h3>Demander un devis ou une info</h3>
+        <p>Réponse sous 24 h ouvrées par téléphone ou email.</p>
+        <div class="field">
+          <label for="nom">Nom &amp; prénom</label>
+          <input id="nom" type="text" required placeholder="Jean Dupont" />
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" type="email" required placeholder="vous@email.fr" />
+        </div>
+        <div class="field">
+          <label for="tel">Téléphone</label>
+          <input id="tel" type="tel" placeholder="06 12 34 56 78" />
+        </div>
+        <div class="field">
+          <label for="profil">Vous êtes</label>
+          <select id="profil">
+            <option>Particulier</option>
+            <option>Artisan</option>
+            <option>Entreprise du BTP</option>
+            <option>Autre</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="msg">Votre projet ou demande</label>
+          <textarea id="msg" placeholder="Décrivez en quelques mots votre besoin (chantier, quantités, agence préférée…)"></textarea>
+        </div>
+        <button type="submit">Envoyer ma demande</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <div class="footer-brand">
+        <img src="img/logo-amc.jpg" alt="AMC Gedibois — Experts par passion" />
+      </div>
+      <p class="footer-text">Anjou Maine Couverture (AMC) Gedibois — Négoce de matériaux pour la charpente, la couverture, l'ardoise et le façonnage métaux. Membre du réseau Gedibois national.</p>
+    </div>
+    <div>
+      <div class="footer-h">Nos agences</div>
+      <div class="footer-l">
+        <a href="#agences">Sablé-sur-Sarthe</a><br />
+        <a href="#agences">Luceau</a><br />
+        <a href="#agences">Évron</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-h">Produits</div>
+      <div class="footer-l">
+        <a href="#charpente">Charpente</a><br />
+        <a href="#couverture">Couverture</a><br />
+        <a href="#menuiserie">Menuiserie</a><br />
+        <a href="#isolation">Isolation</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-h">Liens</div>
+      <div class="footer-l">
+        <a href="https://www.gedibois.fr/" target="_blank" rel="noopener noreferrer">Réseau Gedibois</a><br />
+        <a href="#catalogues">Catalogues 2026</a><br />
+        <a href="#contact">Contact</a><br />
+        <a href="mentions-legales.html">Mentions légales</a><br />
+        <a href="confidentialite.html">Confidentialité</a>
+      </div>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© 2026 AMC Gedibois — Tous droits réservés</span>
+    <span>Site réalisé par <a href="https://studio-ftt.pages.dev" target="_blank" rel="noopener noreferrer">Studio FTT</a></span>
+  </div>
+</footer>
+
+<a href="tel:+33243558038" class="sticky-call">📞 Appeler · 02 43 55 80 38</a>
+
+</body>
+</html>

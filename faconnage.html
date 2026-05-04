@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Façonnage métaux — AMC Gedibois · Joint Debout, accessoires zinc &amp; acier sur-mesure</title>
+<meta name="description" content="Atelier de façonnage de métaux AMC Gedibois — Joint Debout, accessoires zinc et acier sur-mesure. Plus de 15 couleurs disponibles, devis sous 48h." />
+<meta name="robots" content="noindex,nofollow" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --green:#00A552;
+  --green-dark:#007A3D;
+  --green-darker:#005C2E;
+  --green-soft:#E6F4EC;
+  --green-pale:#F2FAF6;
+  --black:#1A1A1A;
+  --ink:#1F2937;
+  --gray:#5A6A7A;
+  --gray-light:#9CA3AF;
+  --line:#E5E7EB;
+  --white:#FFFFFF;
+  --cream:#FAFAF7;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:"Inter",system-ui,-apple-system,sans-serif;background:var(--white);color:var(--ink);font-weight:400;line-height:1.6;-webkit-font-smoothing:antialiased;}
+img{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+button{font-family:inherit;border:0;background:none;cursor:pointer;color:inherit;}
+::selection{background:var(--green);color:var(--white);}
+.container{max-width:1280px;margin:0 auto;padding:0 24px;}
+@media (max-width:600px){.container{padding:0 20px;}}
+
+.topbar{background:var(--green-darker);color:var(--white);padding:9px 0;font-size:13px;}
+.topbar .container{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;}
+.topbar .left{display:flex;gap:24px;align-items:center;flex-wrap:wrap;}
+.topbar .item{display:inline-flex;align-items:center;gap:7px;}
+.topbar .right{font-size:12px;letter-spacing:.05em;opacity:.85;}
+@media (max-width:768px){.topbar{font-size:12px;}.topbar .right{display:none;}}
+
+.nav{position:sticky;top:0;z-index:50;background:var(--white);border-bottom:1px solid var(--line);box-shadow:0 1px 0 rgba(0,0,0,.04);}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0;gap:24px;}
+.brand img{height:54px;width:auto;}
+.nav-links{display:none;gap:32px;font-size:14px;font-weight:500;color:var(--ink);}
+.nav-links a{position:relative;padding:6px 0;transition:color .2s;}
+.nav-links a:hover, .nav-links a.active{color:var(--green);}
+.nav-links a.active::after{content:"";position:absolute;left:0;bottom:0;width:100%;height:2px;background:var(--green);}
+.nav-cta{display:inline-flex;align-items:center;gap:8px;background:var(--green);color:var(--white);padding:11px 22px;font-weight:600;font-size:14px;border-radius:6px;transition:background .2s;}
+.nav-cta:hover{background:var(--green-dark);}
+@media (min-width:980px){.nav-links{display:flex;}}
+
+/* ========== HERO façonnage (sobre, sans vidéo) ========== */
+.hero{position:relative;background:linear-gradient(135deg,var(--green-darker) 0%,var(--green-dark) 100%);color:var(--white);overflow:hidden;}
+.hero::before{
+  content:"";position:absolute;inset:0;
+  background-image:radial-gradient(circle at 80% 20%,rgba(255,255,255,.08),transparent 50%),radial-gradient(circle at 20% 80%,rgba(255,255,255,.05),transparent 50%);
+  pointer-events:none;
+}
+.hero-inner{position:relative;z-index:2;padding:96px 0 112px;text-align:center;max-width:920px;margin:0 auto;}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:#9FE7BC;font-weight:600;margin-bottom:28px;justify-content:center;}
+.hero-eyebrow::before, .hero-eyebrow::after{content:"";display:inline-block;width:32px;height:2px;background:#9FE7BC;}
+.hero-title{font-weight:800;font-size:clamp(36px,5.6vw,68px);line-height:1.05;letter-spacing:-.02em;color:var(--white);margin-bottom:24px;}
+.hero-title .accent{color:#9FE7BC;font-style:italic;font-weight:600;}
+.hero-sub{font-size:19px;color:rgba(255,255,255,.92);max-width:680px;margin:0 auto 36px;line-height:1.6;}
+.hero-cta{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;}
+
+/* ========== Section vidéo pleine largeur (mêmes dimensions que hero home) ========== */
+.video-section{position:relative;width:100%;background:#0a1812;overflow:hidden;min-height:640px;display:block;}
+.video-section video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;}
+@media (max-width:768px){
+  .video-section{display:none;}
+}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 26px;font-weight:600;font-size:15px;border-radius:6px;transition:transform .15s,background .15s,color .15s,box-shadow .2s;cursor:pointer;border:0;}
+.btn-primary{background:var(--white);color:var(--green-dark);}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(0,0,0,.2);}
+.btn-secondary{background:transparent;color:var(--white);border:2px solid rgba(255,255,255,.4);}
+.btn-secondary:hover{border-color:var(--white);background:rgba(255,255,255,.08);}
+.btn-green{background:var(--green);color:var(--white);}
+.btn-green:hover{background:var(--green-dark);}
+.btn-arrow::after{content:"→";display:inline-block;transition:transform .2s;}
+.btn-arrow:hover::after{transform:translateX(4px);}
+.hero-img-wrap{position:relative;}
+.hero-img{aspect-ratio:4/3;border-radius:14px;overflow:hidden;background:rgba(255,255,255,.05);box-shadow:0 30px 60px rgba(0,0,0,.3);}
+.hero-img img{width:100%;height:100%;object-fit:cover;}
+
+.section{padding:96px 0;}
+.section-cream{background:var(--cream);}
+.section-pale{background:var(--green-pale);}
+.section-h{margin-bottom:56px;text-align:center;max-width:760px;margin-left:auto;margin-right:auto;}
+.section-h .label{display:inline-block;font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--green-dark);font-weight:700;margin-bottom:14px;padding:6px 14px;border-radius:100px;background:var(--green-soft);}
+.section-h h2{font-weight:800;font-size:clamp(28px,3.8vw,42px);color:var(--ink);line-height:1.1;letter-spacing:-.02em;}
+.section-h p{margin-top:18px;font-size:17px;color:var(--gray);line-height:1.6;}
+
+/* ========== Feuilles de façonnage ========== */
+.feuilles-grid{display:grid;grid-template-columns:1fr;gap:24px;}
+@media (min-width:800px){.feuilles-grid{grid-template-columns:repeat(3,1fr);}}
+.feuille{background:var(--white);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s,border-color .2s;}
+.feuille:hover{transform:translateY(-4px);box-shadow:0 20px 40px -20px rgba(0,165,82,.2);border-color:var(--green);}
+.feuille-img{aspect-ratio:4/3;overflow:hidden;background:var(--green-pale);}
+.feuille-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s;}
+.feuille:hover .feuille-img img{transform:scale(1.04);}
+.feuille-body{padding:32px 28px 28px;flex:1;display:flex;flex-direction:column;}
+.feuille-num{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:10px;background:var(--green-soft);color:var(--green-dark);font-weight:800;font-size:17px;margin-bottom:16px;}
+.feuille h3{font-weight:800;font-size:20px;color:var(--ink);margin-bottom:10px;letter-spacing:-.005em;}
+.feuille p{font-size:15px;color:var(--gray);line-height:1.6;margin-bottom:18px;}
+.feuille .meta{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px;}
+.feuille .tag{display:inline-block;font-size:12px;font-weight:600;padding:5px 12px;background:var(--green-pale);color:var(--green-dark);border-radius:100px;}
+.feuille-link{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600;color:var(--green-dark);margin-top:auto;padding:10px 0;border-top:1px solid var(--line);transition:gap .2s;}
+.feuille-link:hover{gap:12px;color:var(--green);}
+
+/* ========== Process 3 étapes ========== */
+.process-grid{display:grid;grid-template-columns:1fr;gap:24px;position:relative;}
+@media (min-width:800px){.process-grid{grid-template-columns:repeat(3,1fr);gap:32px;}}
+.step{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:32px 28px;text-align:center;}
+.step-num{width:56px;height:56px;border-radius:50%;background:var(--green);color:var(--white);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:22px;margin:0 auto 20px;}
+.step h3{font-weight:800;font-size:18px;color:var(--ink);margin-bottom:10px;}
+.step p{font-size:14px;color:var(--gray);line-height:1.6;}
+.step a{color:var(--green-dark);font-weight:600;}
+.step a:hover{text-decoration:underline;}
+
+/* ========== Couleurs ========== */
+.color-block{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:24px 28px;}
+.color-block h3{font-weight:800;font-size:14px;color:var(--ink);margin-bottom:16px;letter-spacing:.06em;text-transform:uppercase;}
+.color-block .colors{display:flex;flex-wrap:wrap;gap:10px;}
+.color-chip{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;background:var(--green-pale);border-radius:100px;font-size:13px;font-weight:500;color:var(--ink);}
+.color-chip .dot{width:14px;height:14px;border-radius:50%;border:1px solid rgba(0,0,0,.08);flex-shrink:0;}
+.color-row{display:grid;grid-template-columns:1fr;gap:18px;}
+@media (min-width:800px){.color-row{grid-template-columns:repeat(2,1fr);gap:24px;}}
+
+/* ========== CTA final ========== */
+.cta-final{background:linear-gradient(135deg,var(--green-darker) 0%,var(--green-dark) 100%);color:var(--white);padding:80px 0;text-align:center;position:relative;overflow:hidden;}
+.cta-final::before{
+  content:"";position:absolute;inset:0;
+  background-image:radial-gradient(circle at 80% 20%,rgba(255,255,255,.08),transparent 50%);
+  pointer-events:none;
+}
+.cta-final h2{font-weight:800;font-size:clamp(28px,3.6vw,42px);line-height:1.1;letter-spacing:-.02em;margin-bottom:18px;position:relative;z-index:1;}
+.cta-final p{font-size:17px;color:rgba(255,255,255,.85);max-width:560px;margin:0 auto 32px;line-height:1.6;position:relative;z-index:1;}
+.cta-final .btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;position:relative;z-index:1;}
+.cta-final .email-direct{margin-top:24px;font-size:14px;color:rgba(255,255,255,.7);position:relative;z-index:1;}
+.cta-final .email-direct a{color:#9FE7BC;font-weight:600;}
+
+/* ========== Footer (cohérent avec index) ========== */
+.footer{background:#0F1F18;color:#9CA3AF;padding:72px 0 32px;}
+.footer-grid{display:grid;grid-template-columns:1fr;gap:36px;}
+@media (min-width:800px){.footer-grid{grid-template-columns:2fr 1fr 1fr 1fr;}}
+.footer-brand{display:inline-block;margin-bottom:18px;background:#00A552;padding:6px 10px;border-radius:8px;}
+.footer-brand img{height:50px;width:auto;display:block;}
+.footer-text{font-size:14px;line-height:1.7;color:#9CA3AF;}
+.footer-h{font-weight:700;color:var(--white);font-size:13px;letter-spacing:.18em;text-transform:uppercase;margin-bottom:14px;}
+.footer-l{font-size:14px;line-height:2;color:#9CA3AF;}
+.footer-l a:hover{color:#9FE7BC;}
+.footer-bottom{border-top:1px solid #1F2D26;margin-top:48px;padding-top:24px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;font-size:12px;color:#5A6A6F;}
+.footer-bottom a{color:#9FE7BC;}
+
+.sticky-call{position:fixed;bottom:0;left:0;right:0;background:var(--green);color:var(--white);padding:14px;text-align:center;font-weight:700;font-size:15px;z-index:100;display:flex;align-items:center;justify-content:center;gap:8px;box-shadow:0 -4px 12px rgba(0,0,0,.1);}
+@media (min-width:900px){.sticky-call{display:none;}}
+@media (max-width:899px){body{padding-bottom:64px;}}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="container">
+    <div class="left">
+      <span class="item">📍 3 agences en Sarthe &amp; Mayenne</span>
+      <span class="item">📞 <a href="tel:+33243558038">02 43 55 80 38</a></span>
+      <span class="item">🕐 Lun–Ven 8h–12h / 13h45–17h45</span>
+    </div>
+    <div class="right">Membre du réseau Gedibois — Experts par passion</div>
+  </div>
+</div>
+
+<header class="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="brand">
+      <img src="img/logo-amc.jpg" alt="AMC Gedibois" />
+    </a>
+    <nav class="nav-links">
+      <a href="index.html#produits">Produits</a>
+      <a href="faconnage.html" class="active">Façonnage métaux</a>
+      <a href="index.html#agences">Nos 3 agences</a>
+      <a href="a-propos.html">À propos</a>
+      <a href="partenaires.html">Partenaires</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <a href="mailto:amc.profilage@orange.fr" class="nav-cta">Demander un devis</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container hero-inner">
+    <div class="hero-eyebrow">Service distinctif AMC Gedibois</div>
+    <h1 class="hero-title">Façonnage de métaux <span class="accent">sur-mesure</span>.</h1>
+    <p class="hero-sub">Notre atelier AMC Profilage façonne vos pièces en zinc, acier et aluminium selon vos plans. Joint Debout, accessoires de couverture, habillages, finitions — un service rare en négoce qui fait la différence sur les chantiers exigeants.</p>
+    <div class="hero-cta">
+      <a href="mailto:amc.profilage@orange.fr" class="btn btn-primary btn-arrow">Demander un devis</a>
+      <a href="#feuilles" class="btn btn-secondary">Voir les services</a>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION VIDÉO pleine largeur -->
+<section class="video-section">
+  <video autoplay muted loop playsinline poster="img/profilage.avif" preload="auto">
+    <source src="video/profilage-720p.mp4" type="video/mp4" media="(min-width: 768px)" />
+    <source src="video/profilage-480p.mp4" type="video/mp4" />
+  </video>
+</section>
+
+<!-- FEUILLES DE FAÇONNAGE -->
+<section id="feuilles" class="section section-cream">
+  <div class="container">
+    <div class="section-h">
+      <span class="label">Nos services</span>
+      <h2>3 feuilles de façonnage adaptées à votre chantier.</h2>
+      <p>Chaque feuille couvre un besoin précis. Téléchargez celle qui correspond à votre projet, remplissez vos côtes, envoyez-la — devis sous 48 h.</p>
+    </div>
+
+    <div class="feuilles-grid">
+      <article class="feuille">
+        <div class="feuille-img"><img src="img/feuille-jd.avif" alt="Feuille de façonnage Joint Debout AMC Gedibois" loading="lazy" /></div>
+        <div class="feuille-body">
+          <div class="feuille-num">01</div>
+          <h3>Joint Debout</h3>
+          <p>Pour toutes vos demandes de Joint Debout en aluminium ou zinc naturel. Idéal pour les couvertures contemporaines.</p>
+          <div class="meta">
+            <span class="tag">Aluminium</span>
+            <span class="tag">Zinc naturel</span>
+          </div>
+          <a href="pdf/feuille-faconnage-joint-debout.pdf" target="_blank" rel="noopener noreferrer" class="feuille-link">📄 Télécharger la feuille de commande →</a>
+        </div>
+      </article>
+      <article class="feuille">
+        <div class="feuille-img"><img src="img/feuille-acier.avif" alt="Feuille de façonnage Accessoires Acier AMC Gedibois" loading="lazy" /></div>
+        <div class="feuille-body">
+          <div class="feuille-num">02</div>
+          <h3>Accessoires Acier</h3>
+          <p>Pour toutes vos demandes d'accessoires de couverture, d'habillages et autres pièces en acier.</p>
+          <div class="meta">
+            <span class="tag">Couverture</span>
+            <span class="tag">Habillages</span>
+            <span class="tag">Sur-mesure</span>
+          </div>
+          <a href="pdf/feuille-faconnage-acier.pdf" target="_blank" rel="noopener noreferrer" class="feuille-link">📄 Télécharger la feuille de commande →</a>
+        </div>
+      </article>
+      <article class="feuille">
+        <div class="feuille-img"><img src="img/feuille-zinc.avif" alt="Feuille de façonnage Accessoires Zinc AMC Gedibois" loading="lazy" /></div>
+        <div class="feuille-body">
+          <div class="feuille-num">03</div>
+          <h3>Accessoires Zinc</h3>
+          <p>Pour toutes vos demandes d'accessoires de couverture, d'habillages et autres pièces en zinc.</p>
+          <div class="meta">
+            <span class="tag">Couverture</span>
+            <span class="tag">Habillages</span>
+            <span class="tag">Sur-mesure</span>
+          </div>
+          <a href="mailto:amc.profilage@orange.fr?subject=Demande%20de%20devis%20Accessoires%20Zinc" class="feuille-link">📧 Demander par email →</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="section">
+  <div class="container">
+    <div class="section-h">
+      <span class="label">Comment ça marche</span>
+      <h2>3 étapes simples, devis sous 48 h.</h2>
+      <p>Pas de complications, pas de paperasse inutile — vous nous transmettez vos infos, on vous chiffre.</p>
+    </div>
+
+    <div class="process-grid">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h3>Choisissez</h3>
+        <p>Votre métal (zinc, acier, aluminium), sa couleur dans notre palette, et prenez vos côtes précises.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h3>Remplissez</h3>
+        <p>La feuille de façonnage adaptée à votre besoin (Joint Debout, accessoires acier ou zinc).</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h3>Envoyez</h3>
+        <p>Votre demande à <a href="mailto:amc.profilage@orange.fr">amc.profilage@orange.fr</a> — devis chiffré sous 48 h ouvrées.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COULEURS -->
+<section class="section section-pale">
+  <div class="container">
+    <div class="section-h">
+      <span class="label">Couleurs disponibles</span>
+      <h2>Une palette adaptée à chaque chantier.</h2>
+      <p>Du noir graphite au blanc pur, en passant par les classiques zinc et les tons aluminium contemporains — plus de 15 références au catalogue.</p>
+    </div>
+
+    <div class="color-row" style="margin-bottom:24px;">
+      <div class="color-block">
+        <h3>Acier · Couleurs RAL</h3>
+        <div class="colors">
+          <span class="color-chip"><span class="dot" style="background:#1B2C32;"></span>RAL 7016</span>
+          <span class="color-chip"><span class="dot" style="background:#28507F;"></span>RAL 5008</span>
+          <span class="color-chip"><span class="dot" style="background:#3F633A;"></span>RAL 6011</span>
+          <span class="color-chip"><span class="dot" style="background:#FFFFFF;border-color:#ddd;"></span>RAL 9010</span>
+          <span class="color-chip"><span class="dot" style="background:#73452C;"></span>RAL 8012</span>
+          <span class="color-chip"><span class="dot" style="background:#A5A5A5;"></span>RAL 9006</span>
+        </div>
+      </div>
+      <div class="color-block">
+        <h3>Zinc</h3>
+        <div class="colors">
+          <span class="color-chip"><span class="dot" style="background:#3F4147;"></span>Graphite</span>
+          <span class="color-chip"><span class="dot" style="background:#52595C;"></span>Slate</span>
+          <span class="color-chip"><span class="dot" style="background:#9BA0A3;"></span>Naturel</span>
+        </div>
+        <p style="margin-top:14px;font-size:13px;color:var(--gray);font-style:italic;">+ 6 couleurs sur commande : Or, Rouge, Bleu, Vert, Marron, Noir</p>
+      </div>
+    </div>
+
+    <div class="color-row">
+      <div class="color-block">
+        <h3>Aluminium Tegra</h3>
+        <div class="colors">
+          <span class="color-chip"><span class="dot" style="background:#959595;"></span>Cendre</span>
+          <span class="color-chip"><span class="dot" style="background:#3A3A3A;"></span>Charbon</span>
+        </div>
+      </div>
+      <div class="color-block">
+        <h3>Aluminium Basics</h3>
+        <div class="colors">
+          <span class="color-chip"><span class="dot" style="background:#FFFFFF;border-color:#ddd;"></span>Blanc pur (RAL 9010)</span>
+          <span class="color-chip"><span class="dot" style="background:#7E7E7B;"></span>Gris Agate (RAL 7038)</span>
+          <span class="color-chip"><span class="dot" style="background:#1B1B1B;"></span>Noir Graphite (RAL 9011)</span>
+          <span class="color-chip"><span class="dot" style="background:#5C4F40;"></span>Brun Sepia (RAL 8014)</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-final">
+  <div class="container">
+    <h2>Un projet ? Parlons-en.</h2>
+    <p>Notre atelier répond à toutes vos demandes de façonnage sur-mesure, du devis à la livraison. Réponse sous 48 h ouvrées.</p>
+    <div class="btns">
+      <a href="mailto:amc.profilage@orange.fr" class="btn btn-primary btn-arrow">Demander un devis</a>
+      <a href="tel:+33243558038" class="btn btn-secondary">02 43 55 80 38</a>
+    </div>
+    <p class="email-direct">Email atelier : <a href="mailto:amc.profilage@orange.fr">amc.profilage@orange.fr</a></p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <div class="footer-brand">
+        <img src="img/logo-amc.jpg" alt="AMC Gedibois — Experts par passion" />
+      </div>
+      <p class="footer-text">Anjou Maine Couverture (AMC) Gedibois — Négoce de matériaux pour la charpente, la couverture, l'ardoise et le façonnage métaux. Membre du réseau Gedibois national.</p>
+    </div>
+    <div>
+      <div class="footer-h">Nos agences</div>
+      <div class="footer-l">
+        <a href="index.html#agences">Sablé-sur-Sarthe</a><br />
+        <a href="index.html#agences">Luceau</a><br />
+        <a href="index.html#agences">Évron</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-h">Produits</div>
+      <div class="footer-l">
+        <a href="index.html#produits">Charpente</a><br />
+        <a href="index.html#produits">Couverture</a><br />
+        <a href="faconnage.html">Façonnage métaux</a><br />
+        <a href="index.html#produits">Isolation</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-h">Liens</div>
+      <div class="footer-l">
+        <a href="https://www.gedibois.fr/" target="_blank" rel="noopener noreferrer">Réseau Gedibois</a><br />
+        <a href="index.html#catalogues">Catalogues 2026</a><br />
+        <a href="index.html#contact">Contact</a><br />
+        <a href="#">Mentions légales</a>
+      </div>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© 2026 AMC Gedibois — Tous droits réservés</span>
+    <span>Site réalisé par <a href="https://studio-ftt.pages.dev" target="_blank" rel="noopener noreferrer">Studio FTT</a></span>
+  </div>
+</footer>
+
+<a href="mailto:amc.profilage@orange.fr" class="sticky-call">📧 Demander un devis façonnage</a>
+
+</body>
+</html>
