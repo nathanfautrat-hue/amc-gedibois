@@ -35,7 +35,7 @@ button{font-family:inherit;border:0;background:none;cursor:pointer;color:inherit
 @media (max-width:600px){.container{padding:0 20px;}}
 
 /* ========== Top bar (contact rapide) ========== */
-.topbar{background:var(--green-darker);color:var(--white);padding:9px 0;font-size:13px;}
+.topbar{background:var(--green);color:var(--white);padding:9px 0;font-size:13px;}
 .topbar .container{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;}
 .topbar .left{display:flex;gap:24px;align-items:center;flex-wrap:wrap;}
 .topbar .item{display:inline-flex;align-items:center;gap:7px;}
@@ -65,7 +65,7 @@ button{font-family:inherit;border:0;background:none;cursor:pointer;color:inherit
 @media (max-width:768px){
   .hero-video{display:none;}
 }
-.hero-overlay{position:absolute;inset:0;z-index:1;background:linear-gradient(135deg,rgba(0,92,46,0.88) 0%,rgba(0,40,20,0.78) 50%,rgba(10,20,15,0.85) 100%);}
+.hero-overlay{position:absolute;inset:0;z-index:1;background:linear-gradient(135deg,rgba(0,165,82,0.80) 0%,rgba(0,100,50,0.70) 50%,rgba(10,30,15,0.78) 100%);}
 .hero-overlay::after{
   content:"";position:absolute;inset:0;
   background-image:
@@ -169,7 +169,7 @@ button{font-family:inherit;border:0;background:none;cursor:pointer;color:inherit
 .agence-cta:hover{background:var(--green-dark);}
 
 /* ========== Stats / chiffres clés ========== */
-.stats{background:var(--green-darker);color:var(--white);padding:72px 0;}
+.stats{background:var(--green-dark);color:var(--white);padding:72px 0;}
 .stats-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:36px;text-align:center;}
 @media (min-width:800px){.stats-grid{grid-template-columns:repeat(4,1fr);}}
 .stat-num{font-weight:800;font-size:clamp(36px,5vw,52px);line-height:1;color:#9FE7BC;letter-spacing:-.02em;margin-bottom:8px;}
@@ -223,6 +223,21 @@ button{font-family:inherit;border:0;background:none;cursor:pointer;color:inherit
 .sticky-call{position:fixed;bottom:0;left:0;right:0;background:var(--green);color:var(--white);padding:14px;text-align:center;font-weight:700;font-size:15px;z-index:100;display:flex;align-items:center;justify-content:center;gap:8px;box-shadow:0 -4px 12px rgba(0,0,0,.1);}
 @media (min-width:900px){.sticky-call{display:none;}}
 @media (max-width:899px){body{padding-bottom:64px;}}
+
+/* ========== Hamburger + Menu mobile ========== */
+.hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;width:40px;height:40px;cursor:pointer;border-radius:8px;padding:8px;border:1px solid var(--line);background:none;flex-shrink:0;}
+.hamburger span{display:block;height:2px;background:var(--ink);border-radius:2px;transition:all .3s;}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+.hamburger.open span:nth-child(2){opacity:0;}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+@media (max-width:979px){.hamburger{display:flex;}.nav-cta{display:none;}}
+
+.mobile-menu{display:none;position:fixed;inset:0;background:var(--white);z-index:48;padding:88px 32px 120px;flex-direction:column;overflow-y:auto;}
+.mobile-menu.open{display:flex;}
+.mobile-menu a{font-size:21px;font-weight:700;color:var(--ink);padding:18px 0;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;transition:color .2s;}
+.mobile-menu a:hover{color:var(--green);}
+.mobile-menu .mobile-cta{margin-top:28px;background:var(--green);color:var(--white);padding:18px;text-align:center;border-radius:10px;font-weight:700;font-size:18px;border-bottom:0;justify-content:center;}
+.mobile-menu .mobile-cta:hover{background:var(--green-dark);color:var(--white);}
 </style>
 </head>
 <body>
@@ -253,9 +268,22 @@ button{font-family:inherit;border:0;background:none;cursor:pointer;color:inherit
       <a href="partenaires.html">Partenaires</a>
       <a href="#contact">Contact</a>
     </nav>
+    <button class="hamburger" id="hamburger" aria-label="Ouvrir le menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
     <a href="#contact" class="nav-cta">Nous contacter</a>
   </div>
 </header>
+
+<nav class="mobile-menu" id="mobile-menu" aria-hidden="true">
+  <a href="#produits" class="menu-link">Produits</a>
+  <a href="faconnage.html" class="menu-link">Façonnage métaux</a>
+  <a href="#agences" class="menu-link">Nos 3 agences</a>
+  <a href="a-propos.html" class="menu-link">À propos</a>
+  <a href="partenaires.html" class="menu-link">Partenaires</a>
+  <a href="#contact" class="menu-link">Contact</a>
+  <a href="#contact" class="mobile-cta menu-link">Nous contacter</a>
+</nav>
 
 <!-- HERO -->
 <section class="hero">
@@ -666,6 +694,29 @@ button{font-family:inherit;border:0;background:none;cursor:pointer;color:inherit
 </footer>
 
 <a href="tel:+33243558038" class="sticky-call">📞 Appeler · 02 43 55 80 38</a>
+
+<script>
+(function(){
+  var btn = document.getElementById('hamburger');
+  var menu = document.getElementById('mobile-menu');
+  btn.addEventListener('click', function(){
+    var isOpen = menu.classList.toggle('open');
+    btn.classList.toggle('open');
+    btn.setAttribute('aria-expanded', isOpen);
+    menu.setAttribute('aria-hidden', !isOpen);
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+  });
+  document.querySelectorAll('.menu-link').forEach(function(link){
+    link.addEventListener('click', function(){
+      menu.classList.remove('open');
+      btn.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+      menu.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    });
+  });
+})();
+</script>
 
 </body>
 </html>
